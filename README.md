@@ -1,7 +1,7 @@
 # Configurations
 
-**Ghostty**  
-[Homepage](https://ghostty.org/) | MacOS and Linux
+**Ghostty** | MacOS and Linux  
+[Homepage](https://ghostty.org/)
 
 **Fastfetch**  
 [GitHub](https://github.com/fastfetch-cli/fastfetch)
@@ -12,8 +12,8 @@
 **Oh My Posh**  
 [Homepage](https://ohmyposh.dev/)
 
-**yabai**  
-[GitHub](https://github.com/koekeishiya/yabai) | MacOS only
+**yabai**  | MacOS only  
+[GitHub](https://github.com/koekeishiya/yabai)
 
-**skhd**  
-[GitHub](https://github.com/koekeishiya/skhd) | MacOS only
+**skhd** | MacOS only  
+[GitHub](https://github.com/koekeishiya/skhd)
