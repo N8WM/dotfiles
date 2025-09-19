@@ -1,0 +1,122 @@
+iterm_features = ['current_dir', 'remote_host']
+version = 3
+shell_integration = true
+final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'darkGray'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}darkGray{{end}}']
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  leading_diamond = ''
+  trailing_diamond = ''
+  newline = true
+
+  [[blocks.segments]]
+    trailing_diamond = ''
+    template = ' {{ if .WSL }}WSL {{ end }}{{ .Icon }} '
+    foreground = 'transparent'
+    background = 'default'
+    type = 'os'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    trailing_diamond = ''
+    template = '{{ if .SSHSession }} 󰢹 {{ .UserName }} {{ end }}'
+    foreground = 'transparent'
+    background = 'yellow'
+    type = 'session'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    trailing_diamond = ''
+    template = '  {{ .Path }}{{ if not .Writable }} {{ end }} '
+    foreground = 'transparent'
+    background = 'blue'
+    type = 'path'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'full'
+
+  [[blocks.segments]]
+    trailing_diamond = ''
+    template = ' 󰄉 {{ .FormattedMs }} '
+    foreground = 'transparent'
+    background = 'green'
+    type = 'executiontime'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'round'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+  leading_diamond = ''
+  trailing_diamond = ''
+
+  [[blocks.segments]]
+    leading_diamond = ''
+    template = '{{ if .Error }}{{ .Error }}{{ else }}  {{ if .Venv }}{{ .Venv }}{{ else }}{{ .Full }}{{ end }} {{ end }}'
+    foreground = 'transparent'
+    background = 'yellow'
+    type = 'python'
+    style = 'diamond'
+    invert_powerline = true
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    leading_diamond = ''
+    template = ' {{ .Full }} '
+    foreground = 'transparent'
+    background = 'yellow'
+    type = 'java'
+    style = 'diamond'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    leading_diamond = ''
+    foreground = 'transparent'
+    background = 'green'
+    type = 'git'
+    style = 'diamond'
+    invert_powerline = true
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}lightGreen{{end}}']
+
+    [blocks.segments.properties]
+      cache_duration = 'none'

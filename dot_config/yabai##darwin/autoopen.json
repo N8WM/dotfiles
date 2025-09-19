@@ -1,0 +1,12 @@
+[
+  {
+    "app": "Ghostty"
+  },
+  {
+    "app": "Zen",
+    "cmd": "MOZ_DISABLE_SAFE_MODE_KEY=1 open -b app.zen-browser.zen"
+  },
+  {
+    "app": "Discord"
+  }
+]
