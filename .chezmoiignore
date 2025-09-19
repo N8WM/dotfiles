@@ -4,6 +4,8 @@ LICENSE*
 .DS_Store
 **/.DS_Store
 
+**/.git
+
 {{ if ne .chezmoi.os "darwin" -}}
 .config/yabai/
 .config/skhd/
