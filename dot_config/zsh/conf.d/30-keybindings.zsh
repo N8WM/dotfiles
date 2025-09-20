@@ -2,7 +2,7 @@ typeset -A key
 
 # Prefer zkbd under $ZDOTDIR
 _fallback=1
-_zkbddir="$ZDOTDIR/zkbd"
+_zkbddir="$ZDOTDIR/.zkbd"
 _candidates=(
   "$_zkbddir/${TERM}-${VENDOR}-${OSTYPE}"
   "$_zkbddir/${TERM}-${VENDOR}"

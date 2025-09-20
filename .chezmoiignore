@@ -6,7 +6,9 @@ LICENSE*
 
 **/.git
 
-.config/zsh/zkbd/
+.config/zsh/.zsh_history
+.config/zsh/.zcompdump
+.config/zsh/.zkbd/**
 
 {{- if ne .chezmoi.os "darwin" }}
 .config/yabai/
