@@ -1,0 +1,2 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export CONFIG_DIR="${CONFIG_DIR:-$HOME/.config}"
