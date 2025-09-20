@@ -52,7 +52,8 @@ cursor-style = block
 cursor-style-blink = false
 
 # window-step-resize = true
-window-decoration = none
+# window-decoration = none
+# window-decoration = auto
 # window-height = 34
 # window-width = 134
 window-padding-balance = true

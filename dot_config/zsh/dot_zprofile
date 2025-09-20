@@ -1,0 +1,25 @@
+# MacOS: preserve system PATH order
+phpath="/usr/libexec/path_helper"
+[ -x $phpath ] && eval "$($phpath -s)"
+export PATH="$HOME/bin:$PATH"
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# TeX Live
+if [[ -d /Library/TeX/texbin ]]; then
+  export PATH="/Library/TeX/texbin:$PATH"
+fi
+
+# pyenv set root early; init in interactive (tools)
+export PYENV_ROOT="${PYENV_ROOT:-$HOME/.pyenv}"
+
+# Rust/Cargo
+if [[ -d "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+fi
+
+# Inject defaults
+if [[ -r "/etc/zshrc_${TERM_PROGRAM}" ]]; then
+  source "/etc/zshrc_${TERM_PROGRAM}"
+fi
