@@ -1,7 +1,7 @@
-# Configurations
+# Dotfiles
 
-This is my personal `dotfiles` repository. I use the tool
-[chezmoi](https://chezmoi.io/) to manage my configurations across multiple machines.
+This is my personal `dotfiles` configurations repository. I use the tool
+[chezmoi](https://chezmoi.io/) to manage my multiple configurations across machines.
 
 ## Setup
 
@@ -17,10 +17,13 @@ Pull the dotfiles:
 chezmoi init N8WM
 ```
 
-## Programs
+## Tools
 
 **Ghostty** | MacOS and Linux  
 [Homepage](https://ghostty.org/)
+
+**ZSH**
+[Homepage](https://zsh.sourceforge.io/)
 
 **Fastfetch**  
 [GitHub](https://github.com/fastfetch-cli/fastfetch)
