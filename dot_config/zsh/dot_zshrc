@@ -1,6 +1,5 @@
 # Interactive-only shell setup
 setopt prompt_subst
-autoload -Uz compinit; compinit
 
 # Load conf.d in numeric order
 for f in "$ZDOTDIR"/conf.d/*.zsh(.N); do

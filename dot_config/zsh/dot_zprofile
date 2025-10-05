@@ -1,6 +1,7 @@
 # MacOS: preserve system PATH order
 phpath="/usr/libexec/path_helper"
 [ -x $phpath ] && eval "$($phpath -s)"
+
 export PATH="$HOME/bin:$PATH"
 
 # Homebrew
