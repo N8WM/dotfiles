@@ -14,7 +14,7 @@ _shpath="$_brewprefix/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # pyenv init (root is in .zprofile)
 if command -v pyenv >/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init - zsh)"
 fi
 
 # fzf — prefer its provided script

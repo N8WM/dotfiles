@@ -6,6 +6,9 @@ for f in "$ZDOTDIR"/conf.d/*.zsh(.N); do
   source "$f"
 done
 
+# Ensure Homebrew bin is in PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
 # One compinit globally
 autoload -Uz compinit
 compinit -C
