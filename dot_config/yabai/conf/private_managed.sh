@@ -2,4 +2,3 @@
 
 yabai -m rule --add label=app-manage-system-settings app="^System Settings$" manage=off
 yabai -m rule --add label=app-manage-raycast app="^Raycast$" manage=off
-yabai -m rule --add label=app-manage-discord app="^Discord$" manage=off
