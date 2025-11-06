@@ -71,6 +71,7 @@ theme = "light:TokyoNight Day,dark:TokyoNight Moon"
 
 quit-after-last-window-closed = true
 initial-window = true
+gtk-single-instance = true
 
 # title = ":D"
 
