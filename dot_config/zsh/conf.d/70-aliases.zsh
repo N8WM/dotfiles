@@ -1,5 +1,5 @@
 alias omp="oh-my-posh"
-alias ls='gls --color=auto'
+alias ls='ls --color=auto'
 
 alias vnew="mkdir .venv && python3 -m venv ./.venv"
 alias vact="source ./.venv/bin/activate"
