@@ -29,7 +29,7 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "mason.nvim",
     opts = { ui = { border = "rounded" } },
   },
   -- See lua/config/lazy for lazy ui border rounded
