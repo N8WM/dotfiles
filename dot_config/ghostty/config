@@ -67,7 +67,7 @@ background-blur = true
 cursor-invert-fg-bg = false
 mouse-hide-while-typing = true
 
-theme = "light:TokyoNight Day,dark:TokyoNight Moon"
+theme = "TokyoNight Moon"
 
 quit-after-last-window-closed = true
 initial-window = true
