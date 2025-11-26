@@ -1,3 +1,6 @@
+export ZDOTDIR="$HOME/.config/zsh"
+export CONFIG_DIR="${CONFIG_DIR:-$HOME/.config}"
+
 # MacOS: preserve system PATH order
 phpath="/usr/libexec/path_helper"
 [ -x $phpath ] && eval "$($phpath -s)"
@@ -5,7 +8,8 @@ phpath="/usr/libexec/path_helper"
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+hbsepath="/opt/homebrew/bin/brew"
+[ -x $hbsepath ] && eval "$($hbsepath shellenv)"
 
 # TeX Live
 if [[ -d /Library/TeX/texbin ]]; then
