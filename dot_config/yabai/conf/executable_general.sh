@@ -26,7 +26,7 @@ yabai -m config top_padding 20
 yabai -m config bottom_padding 20
 yabai -m config left_padding 20
 yabai -m config right_padding 20
-yabai -m config window_gap 8
+yabai -m config window_gap 12
 
 # Override gaps for space 2 only
 # yabai -m config --space 2 window_gap 0
