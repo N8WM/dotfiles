@@ -2,7 +2,7 @@
 
 # modify window shadows (default: on, options: on, off, float)
 # example: show shadows only for floating windows
-yabai -m config window_shadow float
+yabai -m config window_shadow off
 
 # window opacity (default: off)
 # example: render all unfocused windows with 90% opacity
