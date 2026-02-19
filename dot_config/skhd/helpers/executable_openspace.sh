@@ -22,9 +22,7 @@ trim_trailing_spaces() {
   local keep_up_to="$1"
   local n i
   n="$(yabai -m query --spaces --display "$CURRENT_DISPLAY" | jq -r 'length')"
-  echo $n
   for ((i = n; i > keep_up_to; i--)); do
-    echo "destroy $i"
     yabai -m space --destroy "$i"
   done
 }
@@ -48,6 +46,9 @@ LAST_SPACE_WITH_WINDOW="$(last_space_with_window)"
 KEEP_UP_TO="$LAST_SPACE_WITH_WINDOW"
 if ((SPACE_REQUESTED > KEEP_UP_TO)); then
   KEEP_UP_TO="$SPACE_REQUESTED"
+fi
+if ((KEEP_UP_TO < 4)); then
+  KEEP_UP_TO=4
 fi
 
 trim_trailing_spaces "$KEEP_UP_TO"
