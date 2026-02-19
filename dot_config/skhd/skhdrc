@@ -25,16 +25,16 @@ hyper - p : yabai -m space --focus prev;
 hyper - n : yabai -m space --focus next;
 
 # swap to space #
-hyper - 1 : yabai -m space --focus 1;
-hyper - 2 : yabai -m space --focus 2;
-hyper - 3 : yabai -m space --focus 3;
-hyper - 4 : yabai -m space --focus 4;
-hyper - 5 : yabai -m space --focus 5;
-hyper - 6 : yabai -m space --focus 6;
-hyper - 7 : yabai -m space --focus 7;
-hyper - 8 : yabai -m space --focus 8;
-hyper - 9 : yabai -m space --focus 9;
-hyper - 0 : yabai -m space --focus 10;
+hyper - 1 : $HOME/.config/skhd/helpers/openspace.sh 1;
+hyper - 2 : $HOME/.config/skhd/helpers/openspace.sh 2;
+hyper - 3 : $HOME/.config/skhd/helpers/openspace.sh 3;
+hyper - 4 : $HOME/.config/skhd/helpers/openspace.sh 4;
+hyper - 5 : $HOME/.config/skhd/helpers/openspace.sh 5;
+hyper - 6 : $HOME/.config/skhd/helpers/openspace.sh 6;
+hyper - 7 : $HOME/.config/skhd/helpers/openspace.sh 7;
+hyper - 8 : $HOME/.config/skhd/helpers/openspace.sh 8;
+hyper - 9 : $HOME/.config/skhd/helpers/openspace.sh 9;
+hyper - 0 : $HOME/.config/skhd/helpers/openspace.sh 10;
 
 
 # focus a window
@@ -49,7 +49,7 @@ managewin < hyper - y : skhd -k "escape"; yabai -m space --mirror y-axis
 managewin < hyper - x : skhd -k "escape"; yabai -m space --mirror x-axis
 
 # toggle window float
-managewin < hyper - t : skhd -k "escape"; yabai -m window --toggle float --grid 6:6:1:1:4:4
+managewin < hyper - t : skhd -k "escape"; yabai -m window --toggle float && ~/.config/skhd/helpers/autoposition.sh
 
 
 # maximize a window
@@ -74,17 +74,16 @@ managewin < hyper - p : skhd -k "escape"; yabai -m window --space prev;
 managewin < hyper - n : skhd -k "escape"; yabai -m window --space next;
 
 # move window to space #
-managewin < hyper - 1 : skhd -k "escape"; yabai -m window --space 1; yabai -m space --focus 1;
-managewin < hyper - 2 : skhd -k "escape"; yabai -m window --space 2; yabai -m space --focus 2;
-managewin < hyper - 3 : skhd -k "escape"; yabai -m window --space 3; yabai -m space --focus 3;
-managewin < hyper - 4 : skhd -k "escape"; yabai -m window --space 4; yabai -m space --focus 4;
-managewin < hyper - 5 : skhd -k "escape"; yabai -m window --space 5; yabai -m space --focus 5;
-managewin < hyper - 6 : skhd -k "escape"; yabai -m window --space 6; yabai -m space --focus 6;
-managewin < hyper - 7 : skhd -k "escape"; yabai -m window --space 7; yabai -m space --focus 7;
-managewin < hyper - 8 : skhd -k "escape"; yabai -m window --space 8; yabai -m space --focus 8;
-managewin < hyper - 9 : skhd -k "escape"; yabai -m window --space 9; yabai -m space --focus 9;
-managewin < hyper - 0 : skhd -k "escape"; yabai -m window --space 10; yabai -m space --focus 10;
-
+managewin < hyper - 1 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 1 true;
+managewin < hyper - 2 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 2 true;
+managewin < hyper - 3 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 3 true;
+managewin < hyper - 4 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 4 true;
+managewin < hyper - 5 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 5 true;
+managewin < hyper - 6 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 6 true;
+managewin < hyper - 7 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 7 true;
+managewin < hyper - 8 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 8 true;
+managewin < hyper - 9 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 9 true;
+managewin < hyper - 0 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 10 true;
 
 
 # change window width
