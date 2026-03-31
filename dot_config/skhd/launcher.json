@@ -1,0 +1,56 @@
+[
+  {
+    "key": "g",
+    "app": "Ghostty"
+  },
+  {
+    "key": "z",
+    "app": "Zen",
+    "cmd": "MOZ_DISABLE_SAFE_MODE_KEY=1 open -b app.zen-browser.zen"
+  },
+  {
+    "key": "d",
+    "app": "Discord"
+  },
+  {
+    "key": "n",
+    "app": "Notes"
+  },
+  {
+    "key": "m",
+    "app": "Mail"
+  },
+  {
+    "key": "i",
+    "app": "Messages"
+  },
+  {
+    "key": "c",
+    "app": "Calendar"
+  },
+  {
+    "key": "f",
+    "app": "Finder",
+    "cmd": "osascript -e 'tell application \"Finder\" to activate' -e 'tell application \"Finder\" to make new Finder window'"
+  },
+  {
+    "key": "p",
+    "app": "Passwords"
+  },
+  {
+    "key": "r",
+    "app": "Reminders"
+  },
+  {
+    "key": "s",
+    "app": "System Settings"
+  },
+  {
+    "key": "o",
+    "app": "Zoom"
+  },
+  {
+    "key": "t",
+    "app": "ChatGPT"
+  }
+]

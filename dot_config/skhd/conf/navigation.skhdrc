@@ -1,0 +1,28 @@
+# change window focus within space
+hyper - j : yabai -m window --focus south
+hyper - k : yabai -m window --focus north
+hyper - h : yabai -m window --focus west
+hyper - l : yabai -m window --focus east
+
+# change focus between external displays (left and right)
+hyper - a: yabai -m display --focus west
+hyper - d: yabai -m display --focus east
+
+# swap to prev and next space
+hyper - p : yabai -m space --focus prev;
+hyper - n : yabai -m space --focus next;
+
+# swap to space #
+hyper - 1 : $HOME/.config/skhd/helpers/openspace.sh 1;
+hyper - 2 : $HOME/.config/skhd/helpers/openspace.sh 2;
+hyper - 3 : $HOME/.config/skhd/helpers/openspace.sh 3;
+hyper - 4 : $HOME/.config/skhd/helpers/openspace.sh 4;
+hyper - 5 : $HOME/.config/skhd/helpers/openspace.sh 5;
+hyper - 6 : $HOME/.config/skhd/helpers/openspace.sh 6;
+hyper - 7 : $HOME/.config/skhd/helpers/openspace.sh 7;
+hyper - 8 : $HOME/.config/skhd/helpers/openspace.sh 8;
+hyper - 9 : $HOME/.config/skhd/helpers/openspace.sh 9;
+hyper - 0 : $HOME/.config/skhd/helpers/openspace.sh 10;
+
+# focus a window
+hyper - space : ~/.config/skhd/helpers/autofocus.sh

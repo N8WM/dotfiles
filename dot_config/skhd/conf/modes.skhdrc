@@ -1,0 +1,14 @@
+# Default mode for window navigation
+# managewin mode for window placement and resizing
+:: managewin @
+:: applaunch @
+
+hyper - m ; managewin
+hyper - v ; applaunch
+
+managewin, applaunch < escape ; default
+
+# stop/start/restart yabai
+hyper - q : yabai --stop-service
+hyper - s : yabai --start-service
+hyper - r : yabai --restart-service
