@@ -1,5 +1,6 @@
 alias omp="oh-my-posh"
 alias ls='ls --color=auto'
+alias ll='ls -l --color=auto'
 
 alias vnew="mkdir .venv && python3 -m venv ./.venv"
 alias vact="source ./.venv/bin/activate"
@@ -8,3 +9,6 @@ alias vrm="rm -rf .venv"
 alias vclean="pip freeze | xargs pip uninstall -y"
 
 alias inv='vim $(fzf -m --preview="bat --color=always {}")'
+
+alias c="chezmoi"
+alias g="git"
