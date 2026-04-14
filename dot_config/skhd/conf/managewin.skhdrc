@@ -5,7 +5,7 @@ managewin < hyper - y : skhd -k "escape"; yabai -m space --mirror y-axis
 managewin < hyper - x : skhd -k "escape"; yabai -m space --mirror x-axis
 
 # toggle window float
-managewin < hyper - t : skhd -k "escape"; yabai -m window --toggle float && ~/.config/skhd/helpers/autoposition.sh
+managewin < hyper - t : skhd -k "escape"; yabai -m window --toggle float && ~/.config/skhd/helpers/autosize.sh
 
 # maximize a window
 managewin < hyper - f : skhd -k "escape"; yabai -m window --toggle zoom-fullscreen

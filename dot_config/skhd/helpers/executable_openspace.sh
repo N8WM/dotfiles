@@ -36,7 +36,7 @@ if [[ "$MOVE_FOCUSED_WINDOW" == "true" ]]; then
   yabai -m space --focus "$SPACE_REQUESTED"
   yabai -m window --focus "$FOCUSED_WINDOW"
 
-  "$HOME/.config/skhd/helpers/autoposition.sh"
+  "$HOME/.config/skhd/helpers/autosize.sh"
 else
   yabai -m space --focus "$SPACE_REQUESTED"
 fi

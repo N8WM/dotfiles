@@ -8,6 +8,11 @@
 
 yabai -m config debug_output on
 
+# Cache menu bar height for helpers
+mkdir -p ~/.cache/yabai
+osascript -e 'tell application "System Events" to get the size of the menu bar of process "Finder"' \
+  | awk -F', ' '{print $2}' > ~/.cache/yabai/menu_bar_height
+
 # Tiling Options
 
 # Override default layout for space 1 only
@@ -52,7 +57,7 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 # set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
-yabai -m config focus_follows_mouse autofocus
+yabai -m config focus_follows_mouse off
 
 # set mouse follows focus mode (default: off)
 yabai -m config mouse_follows_focus on
@@ -71,4 +76,4 @@ yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yab
 # yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
 # Automatically reposition newly created windows (if floating)
-yabai -m signal --add event=window_created action="~/.config/skhd/helpers/autoposition.sh"
+yabai -m signal --add event=window_created action="~/.config/skhd/helpers/autosize.sh"
