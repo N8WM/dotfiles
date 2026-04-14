@@ -59,8 +59,10 @@ fi
 
 ORIG_X="$(jq -r '.x | floor' <<<"$FRAME")"
 ORIG_Y="$(jq -r '.y | floor' <<<"$FRAME")"
-WIN_X=$ORIG_X
-WIN_Y=$ORIG_Y
+
+# Preserve center of original window
+WIN_X=$(( ORIG_X + (CURRENT_W - WIN_W) / 2 ))
+WIN_Y=$(( ORIG_Y + (CURRENT_H - WIN_H) / 2 ))
 
 DISPLAY_FRAME="$(yabai -m query --displays --display | jq '.frame')"
 DISPLAY_W="$(jq -r '.w | floor' <<<"$DISPLAY_FRAME")"
