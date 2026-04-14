@@ -10,8 +10,8 @@ yabai -m config debug_output on
 
 # Cache menu bar height for helpers
 mkdir -p ~/.cache/yabai
-osascript -e 'tell application "System Events" to get the size of the menu bar of process "Finder"' \
-  | awk -F', ' '{print $2}' > ~/.cache/yabai/menu_bar_height
+osascript -e 'tell application "System Events" to get the size of the menu bar of process "Finder"' |
+  awk -F', ' '{print $2}' >~/.cache/yabai/menu_bar_height
 
 # Tiling Options
 
@@ -60,7 +60,7 @@ yabai -m config mouse_action2 resize
 yabai -m config focus_follows_mouse off
 
 # set mouse follows focus mode (default: off)
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 
 # Status Bar
 
