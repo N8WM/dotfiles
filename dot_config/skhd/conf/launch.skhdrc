@@ -1,73 +1,73 @@
 # launch apps
 applaunch < a : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh a
-applaunch < hyper - a : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh a
+applaunch < cmd + alt + ctrl - a : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh a
 applaunch < b : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh b
-applaunch < hyper - b : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh b
+applaunch < cmd + alt + ctrl - b : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh b
 applaunch < c : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh c
-applaunch < hyper - c : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh c
+applaunch < cmd + alt + ctrl - c : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh c
 applaunch < d : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh d
-applaunch < hyper - d : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh d
+applaunch < cmd + alt + ctrl - d : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh d
 applaunch < e : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh e
-applaunch < hyper - e : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh e
+applaunch < cmd + alt + ctrl - e : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh e
 applaunch < f : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh f
-applaunch < hyper - f : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh f
+applaunch < cmd + alt + ctrl - f : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh f
 applaunch < g : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh g
-applaunch < hyper - g : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh g
+applaunch < cmd + alt + ctrl - g : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh g
 applaunch < h : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh h
-applaunch < hyper - h : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh h
+applaunch < cmd + alt + ctrl - h : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh h
 applaunch < i : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh i
-applaunch < hyper - i : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh i
+applaunch < cmd + alt + ctrl - i : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh i
 applaunch < j : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh j
-applaunch < hyper - j : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh j
+applaunch < cmd + alt + ctrl - j : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh j
 applaunch < k : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh k
-applaunch < hyper - k : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh k
+applaunch < cmd + alt + ctrl - k : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh k
 applaunch < l : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh l
-applaunch < hyper - l : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh l
+applaunch < cmd + alt + ctrl - l : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh l
 applaunch < m : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh m
-applaunch < hyper - m : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh m
+applaunch < cmd + alt + ctrl - m : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh m
 applaunch < n : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh n
-applaunch < hyper - n : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh n
+applaunch < cmd + alt + ctrl - n : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh n
 applaunch < o : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh o
-applaunch < hyper - o : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh o
+applaunch < cmd + alt + ctrl - o : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh o
 applaunch < p : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh p
-applaunch < hyper - p : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh p
+applaunch < cmd + alt + ctrl - p : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh p
 applaunch < q : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh q
-applaunch < hyper - q : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh q
+applaunch < cmd + alt + ctrl - q : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh q
 applaunch < r : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh r
-applaunch < hyper - r : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh r
+applaunch < cmd + alt + ctrl - r : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh r
 applaunch < s : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh s
-applaunch < hyper - s : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh s
+applaunch < cmd + alt + ctrl - s : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh s
 applaunch < t : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh t
-applaunch < hyper - t : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh t
+applaunch < cmd + alt + ctrl - t : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh t
 applaunch < u : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh u
-applaunch < hyper - u : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh u
+applaunch < cmd + alt + ctrl - u : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh u
 applaunch < v : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh v
-applaunch < hyper - v : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh v
+applaunch < cmd + alt + ctrl - v : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh v
 applaunch < w : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh w
-applaunch < hyper - w : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh w
+applaunch < cmd + alt + ctrl - w : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh w
 applaunch < x : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh x
-applaunch < hyper - x : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh x
+applaunch < cmd + alt + ctrl - x : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh x
 applaunch < y : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh y
-applaunch < hyper - y : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh y
+applaunch < cmd + alt + ctrl - y : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh y
 applaunch < z : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh z
-applaunch < hyper - z : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh z
+applaunch < cmd + alt + ctrl - z : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh z
 applaunch < 0 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 0
-applaunch < hyper - 0 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 0
+applaunch < cmd + alt + ctrl - 0 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 0
 applaunch < 1 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 1
-applaunch < hyper - 1 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 1
+applaunch < cmd + alt + ctrl - 1 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 1
 applaunch < 2 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 2
-applaunch < hyper - 2 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 2
+applaunch < cmd + alt + ctrl - 2 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 2
 applaunch < 3 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 3
-applaunch < hyper - 3 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 3
+applaunch < cmd + alt + ctrl - 3 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 3
 applaunch < 4 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 4
-applaunch < hyper - 4 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 4
+applaunch < cmd + alt + ctrl - 4 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 4
 applaunch < 5 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 5
-applaunch < hyper - 5 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 5
+applaunch < cmd + alt + ctrl - 5 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 5
 applaunch < 6 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 6
-applaunch < hyper - 6 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 6
+applaunch < cmd + alt + ctrl - 6 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 6
 applaunch < 7 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 7
-applaunch < hyper - 7 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 7
+applaunch < cmd + alt + ctrl - 7 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 7
 applaunch < 8 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 8
-applaunch < hyper - 8 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 8
+applaunch < cmd + alt + ctrl - 8 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 8
 applaunch < 9 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 9
-applaunch < hyper - 9 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 9
+applaunch < cmd + alt + ctrl - 9 : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh 9

@@ -3,12 +3,11 @@
 :: managewin @
 :: applaunch @
 
-hyper - m ; managewin
-hyper - v ; applaunch
+cmd + alt + ctrl - v ; applaunch
 
 managewin, applaunch < escape ; default
 
 # stop/start/restart yabai
-hyper - q : yabai --stop-service
-hyper - s : yabai --start-service
-hyper - r : yabai --restart-service
+cmd + alt + ctrl - q : yabai --stop-service
+cmd + alt + ctrl - s : yabai --start-service
+cmd + alt + ctrl - r : yabai --restart-service
