@@ -30,12 +30,8 @@ trim_trailing_spaces() {
 ensure_target_exists "$SPACE_REQUESTED"
 
 if [[ "$MOVE_FOCUSED_WINDOW" == "true" ]]; then
-  FOCUSED_WINDOW="$(yabai -m query --windows --window | jq -r '.id')"
-
-  yabai -m window --space "$SPACE_REQUESTED"
-  yabai -m space --focus "$SPACE_REQUESTED"
-  yabai -m window --focus "$FOCUSED_WINDOW"
-
+  yabai -m window --space "$SPACE_REQUESTED" --focus
+  sleep 0.3
   "$HOME/.config/skhd/helpers/autosize.sh"
 else
   yabai -m space --focus "$SPACE_REQUESTED"

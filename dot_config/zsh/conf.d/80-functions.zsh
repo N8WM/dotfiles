@@ -1,7 +1,7 @@
 # Update yabai
 function yabai-update() {
   yabai --stop-service && success=true || success=false
-  curl -L https://raw.githubusercontent.com/koekeishiya/yabai/master/scripts/install.sh | sh /dev/stdin ~/.local/bin ~/.local/man
+  curl -L https://raw.githubusercontent.com/asmvik/yabai/master/scripts/install.sh | sh /dev/stdin ~/.local/bin ~/.local/man
 
   if [ "$success" = true ]; then
     yabai --start-service

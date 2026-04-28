@@ -19,4 +19,4 @@ yabai -m config window_animation_duration 0.08
 yabai -m config menubar_opacity 0.9
 
 # Show borders
-borders active_color=0xff7aa2f7 inactive_color=0xff494d64 width=7.0 &
+borders active_color=0xff7aa2f7 inactive_color=0xff494d64 width=7.0 style=uniform &
