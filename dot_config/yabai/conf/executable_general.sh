@@ -6,7 +6,7 @@
 # To view the last lines of the debug log, use:
 # tail -f /tmp/yabai_$USER.out.log
 
-yabai -m config debug_output on
+yabai -m config debug_output off
 
 # Cache menu bar height for helpers
 mkdir -p ~/.cache/yabai
@@ -70,7 +70,7 @@ yabai -m config mouse_follows_focus off
 # yabai -m config external_bar all:20:20
 
 # Focus window after active space changes
-yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
+# yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
 
 # # Focus window after active display changes
 # yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
