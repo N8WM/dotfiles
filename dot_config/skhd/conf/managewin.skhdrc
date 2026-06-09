@@ -1,43 +1,43 @@
 # flip along y-axis
-cmd + shift + alt + ctrl - y : skhd -k "escape"; yabai -m space --mirror y-axis
+cmd + shift + alt + ctrl - y : yabai -m space --mirror y-axis
 
 # flip along x-axis
-cmd + shift + alt + ctrl - x : skhd -k "escape"; yabai -m space --mirror x-axis
+cmd + shift + alt + ctrl - x : yabai -m space --mirror x-axis
 
 # toggle window float
-cmd + shift + alt + ctrl - t : skhd -k "escape"; yabai -m window --toggle float && ~/.config/skhd/helpers/autosize.sh
+cmd + shift + alt + ctrl - t : yabai -m window --toggle float && ~/.config/skhd/helpers/autosize.sh
 
 # maximize a window
-cmd + shift + alt + ctrl - f : skhd -k "escape"; yabai -m window --toggle zoom-fullscreen
+cmd + shift + alt + ctrl - f : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-cmd + shift + alt + ctrl - e : skhd -k "escape"; yabai -m space --balance
+cmd + shift + alt + ctrl - e : yabai -m space --balance
 
 # swap windows
-cmd + shift + alt + ctrl - j : skhd -k "escape"; yabai -m window --swap south
-cmd + shift + alt + ctrl - k : skhd -k "escape"; yabai -m window --swap north
-cmd + shift + alt + ctrl - h : skhd -k "escape"; yabai -m window --swap west
-cmd + shift + alt + ctrl - l : skhd -k "escape"; yabai -m window --swap east
+cmd + shift + alt + ctrl - j : yabai -m window --swap south
+cmd + shift + alt + ctrl - k : yabai -m window --swap north
+cmd + shift + alt + ctrl - h : yabai -m window --swap west
+cmd + shift + alt + ctrl - l : yabai -m window --swap east
 
 # move window to display left and right
-cmd + shift + alt + ctrl - a : skhd -k "escape"; yabai -m window --display west; yabai -m display --focus west;
-cmd + shift + alt + ctrl - d : skhd -k "escape"; yabai -m window --display east; yabai -m display --focus east;
+cmd + shift + alt + ctrl - a : yabai -m window --display west; yabai -m display --focus west;
+cmd + shift + alt + ctrl - d : yabai -m window --display east; yabai -m display --focus east;
 
 # move window to prev and next space
-cmd + shift + alt + ctrl - p : skhd -k "escape"; yabai -m window --space prev;
-cmd + shift + alt + ctrl - n : skhd -k "escape"; yabai -m window --space next;
+cmd + shift + alt + ctrl - p : yabai -m window --space prev;
+cmd + shift + alt + ctrl - n : yabai -m window --space next;
 
 # move window to space #
-cmd + shift + alt + ctrl - 1 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 1 true;
-cmd + shift + alt + ctrl - 2 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 2 true;
-cmd + shift + alt + ctrl - 3 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 3 true;
-cmd + shift + alt + ctrl - 4 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 4 true;
-cmd + shift + alt + ctrl - 5 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 5 true;
-cmd + shift + alt + ctrl - 6 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 6 true;
-cmd + shift + alt + ctrl - 7 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 7 true;
-cmd + shift + alt + ctrl - 8 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 8 true;
-cmd + shift + alt + ctrl - 9 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 9 true;
-cmd + shift + alt + ctrl - 0 : skhd -k "escape"; $HOME/.config/skhd/helpers/openspace.sh 10 true;
+cmd + shift + alt + ctrl - 1 : $HOME/.config/skhd/helpers/openspace.sh 1 true;
+cmd + shift + alt + ctrl - 2 : $HOME/.config/skhd/helpers/openspace.sh 2 true;
+cmd + shift + alt + ctrl - 3 : $HOME/.config/skhd/helpers/openspace.sh 3 true;
+cmd + shift + alt + ctrl - 4 : $HOME/.config/skhd/helpers/openspace.sh 4 true;
+cmd + shift + alt + ctrl - 5 : $HOME/.config/skhd/helpers/openspace.sh 5 true;
+cmd + shift + alt + ctrl - 6 : $HOME/.config/skhd/helpers/openspace.sh 6 true;
+cmd + shift + alt + ctrl - 7 : $HOME/.config/skhd/helpers/openspace.sh 7 true;
+cmd + shift + alt + ctrl - 8 : $HOME/.config/skhd/helpers/openspace.sh 8 true;
+cmd + shift + alt + ctrl - 9 : $HOME/.config/skhd/helpers/openspace.sh 9 true;
+cmd + shift + alt + ctrl - 0 : $HOME/.config/skhd/helpers/openspace.sh 10 true;
 
 # change window width
 cmd + shift + alt + ctrl - right : yabai -m window --resize right:60:0
@@ -48,7 +48,7 @@ cmd + shift + alt + ctrl - up : yabai -m window --resize up:0:60
 cmd + shift + alt + ctrl - down : yabai -m window --resize down:0:-60
 
 # float window and remember
-cmd + shift + alt + ctrl - m : skhd -k "escape"; $HOME/.config/skhd/helpers/permafloat.sh
+cmd + shift + alt + ctrl - m : $HOME/.config/skhd/helpers/permafloat.sh
 
 # remember the space a window is on
-cmd + shift + alt + ctrl - r : skhd -k "escape"; $HOME/.config/skhd/helpers/permaspace.sh
+cmd + shift + alt + ctrl - r : $HOME/.config/skhd/helpers/permaspace.sh
