@@ -1,6 +1,7 @@
-:: normal
+:: default : $HOME/.config/skhd/helpers/bordermode.sh default
+:: normal  : $HOME/.config/skhd/helpers/bordermode.sh normal
 :: normal_g
-:: visual
+:: visual  : $HOME/.config/skhd/helpers/bordermode.sh visual
 :: visual_g
 
 # Enter Normal mode
