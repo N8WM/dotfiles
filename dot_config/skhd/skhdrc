@@ -1,4 +1,9 @@
-.load "conf/modes.skhdrc"
 .load "conf/launch.skhdrc"
 .load "conf/navigation.skhdrc"
 .load "conf/managewin.skhdrc"
+.load "conf/cursor.skhdrc"
+
+# stop/start/restart yabai
+cmd + alt + ctrl - q : yabai --stop-service
+cmd + alt + ctrl - s : yabai --start-service
+cmd + alt + ctrl - r : yabai --restart-service

@@ -1,3 +1,8 @@
+:: applaunch @
+
+cmd + alt + ctrl - v ; applaunch
+applaunch < escape ; default
+
 # launch apps
 applaunch < a : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh a
 applaunch < cmd + alt + ctrl - a : skhd -k "escape"; $HOME/.config/skhd/helpers/launchapp.sh a

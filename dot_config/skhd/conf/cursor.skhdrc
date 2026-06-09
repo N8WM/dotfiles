@@ -1,0 +1,96 @@
+:: normal
+:: normal_g
+:: visual
+:: visual_g
+
+# Enter Normal mode
+cmd + alt + ctrl - tab ; normal
+
+# Exit back to default
+normal   < cmd + alt + ctrl - tab ; default
+normal_g < cmd + alt + ctrl - tab ; default
+visual   < cmd + alt + ctrl - tab ; default
+visual_g < cmd + alt + ctrl - tab ; default
+
+# Esc goes back a layer
+normal   < escape ; default
+normal_g < escape ; normal
+visual   < escape ; normal
+visual_g < escape ; normal
+
+# Cancel keys
+normal_g < delete ; normal
+normal_g < return ; normal
+visual_g < delete ; visual
+visual_g < return ; visual
+
+# Insert/append
+normal < i ; default
+
+normal < shift - i : skhd -k "escape"; skhd -k "cmd - left"
+normal < a         : skhd -k "escape"; skhd -k "right"
+normal < shift - a : skhd -k "escape"; skhd -k "cmd - right"
+
+normal < v ; visual
+
+# Normal movement
+
+normal < h : skhd -k "left"
+normal < j : skhd -k "down"
+normal < k : skhd -k "up"
+normal < l : skhd -k "right"
+
+normal < b : skhd -k "alt - left"
+normal < w : skhd -k "alt - right"
+
+normal < 0         : skhd -k "cmd - left"
+normal < shift - 4 : skhd -k "cmd - right"
+
+normal < g ; normal_g
+normal_g < g : skhd -k "cmd - up"; skhd -k "escape"
+normal < shift - g : skhd -k "cmd - down"
+
+normal < ctrl - u : skhd -k "pageup"
+normal < ctrl - d : skhd -k "pagedown"
+
+# Visual movement
+
+visual < h : skhd -k "shift - left"
+visual < j : skhd -k "shift - down"
+visual < k : skhd -k "shift - up"
+visual < l : skhd -k "shift - right"
+
+visual < b : skhd -k "shift + alt - left"
+visual < w : skhd -k "shift + alt - right"
+
+visual < 0         : skhd -k "shift + cmd - left"
+visual < shift - 4 : skhd -k "shift + cmd - right"
+
+visual < g ; visual_g
+visual_g < g : skhd -k "shift + cmd - up"; skhd -k "escape"
+visual < shift - g : skhd -k "shift + cmd - down"
+
+visual < ctrl - u : skhd -k "shift - pageup"
+visual < ctrl - d : skhd -k "shift - pagedown"
+
+# Normal editing
+
+normal < x : skhd -k "delete"
+normal < y : skhd -k "cmd - c"
+normal < p : skhd -k "cmd - v"
+normal < u : skhd -k "cmd - z"
+normal < ctrl - r : skhd -k "shift + cmd - z"
+
+# Visual actions
+
+visual < x      : skhd -k "cmd - x"; skhd -k "escape"
+visual < y      : skhd -k "cmd - c"; skhd -k "escape"
+visual < p      : skhd -k "cmd - v"; skhd -k "escape"
+visual < delete : skhd -k "delete"; skhd -k "escape"
+
+# Utility
+
+normal < 0x2C : skhd -k "cmd - f"     # slash
+normal < 0x21 : skhd -k "cmd - 0x21"  # left bracket
+normal < 0x1E : skhd -k "cmd - 0x1E"  # right bracket
+normal < tab : skhd -k "ctrl - tab"
