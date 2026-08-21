@@ -78,3 +78,49 @@ function dot_push() {
   git -C $dir commit -m "$msg"
   git -C $dir push
 }
+
+function ds() {
+  local dir="${1:-.}"
+  local choice
+  local -a files
+
+  if [[ ! -d "$dir" ]]; then
+    print -u2 "ds: not a directory: $dir"
+    return 1
+  fi
+
+  files=("$dir"/**/.DS_Store(ND))
+
+  if (( ${#files} == 0 )); then
+    print "No .DS_Store files found."
+    return 0
+  fi
+
+  print "Found ${#files} .DS_Store file(s) under: $dir"
+
+  while true; do
+    read "choice?[p]review, [d]elete, [q]uit: "
+
+    case "$choice" in
+      p|P)
+        printf '%s\n' "${files[@]}" | less
+        ;;
+      d|D|y|Y)
+        if rm -- "${files[@]}"; then
+          print "Deleted ${#files} .DS_Store file(s)."
+          return 0
+        else
+          print -u2 "ds: one or more files could not be deleted."
+          return 1
+        fi
+        ;;
+      q|Q|n|N)
+        print "Cancelled."
+        return 0
+        ;;
+      *)
+        print "Please enter p, d, or q."
+        ;;
+    esac
+  done
+}
