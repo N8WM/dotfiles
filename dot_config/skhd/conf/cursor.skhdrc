@@ -5,13 +5,13 @@
 :: visual_g
 
 # Enter Normal mode
-cmd + alt + ctrl - tab ; normal
+cmd + alt + ctrl - n ; normal
 
 # Exit back to default
-normal   < cmd + alt + ctrl - tab ; default
-normal_g < cmd + alt + ctrl - tab ; default
-visual   < cmd + alt + ctrl - tab ; default
-visual_g < cmd + alt + ctrl - tab ; default
+normal   < cmd + alt + ctrl - n ; default
+normal_g < cmd + alt + ctrl - n ; default
+visual   < cmd + alt + ctrl - n ; default
+visual_g < cmd + alt + ctrl - n ; default
 
 # Esc goes back a layer
 normal   < escape ; default

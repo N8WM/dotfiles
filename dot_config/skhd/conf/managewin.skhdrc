@@ -52,3 +52,18 @@ cmd + shift + alt + ctrl - m : $HOME/.config/skhd/helpers/permafloat.sh
 
 # remember the space a window is on
 cmd + shift + alt + ctrl - r : $HOME/.config/skhd/helpers/permaspace.sh
+
+# stack onto another window: run on the window to move, then on the destination
+cmd + shift + alt + ctrl - s : $HOME/.config/skhd/helpers/stacking.sh
+
+# unstack the focused window (no native unstack; leave the tree and rejoin it)
+cmd + shift + alt + ctrl - u : yabai -m window --toggle float && yabai -m window --toggle float
+
+# next window created here joins this window's stack (toggle)
+cmd + shift + alt + ctrl - i : yabai -m window --insert stack
+
+# pull the neighbouring window into this stack (focus follows it in)
+cmd + alt + ctrl - left : yabai -m window --stack west && yabai -m window --focus stack.last
+cmd + alt + ctrl - right : yabai -m window --stack east && yabai -m window --focus stack.last
+cmd + alt + ctrl - up : yabai -m window --stack north && yabai -m window --focus stack.last
+cmd + alt + ctrl - down : yabai -m window --stack south && yabai -m window --focus stack.last

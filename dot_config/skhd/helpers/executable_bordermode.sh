@@ -12,4 +12,8 @@ normal)
 visual)
   borders active_color=0xffbb9af7 inactive_color=0x00494d64 width=9.0 style=uniform &
   ;;
+
+stack)
+  borders active_color=0xfff7768e inactive_color=0x00494d64 width=9.0 style=uniform &
+  ;;
 esac

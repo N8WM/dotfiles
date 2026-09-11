@@ -69,11 +69,5 @@ yabai -m config mouse_follows_focus off
 # add 20 padding to the top and bottom of all spaces regardless of the display it belongs to
 # yabai -m config external_bar all:20:20
 
-# Focus window after active space changes
-# yabai -m signal --add event=space_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
-
-# # Focus window after active display changes
-# yabai -m signal --add event=display_changed action="yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id)"
-
 # Automatically reposition newly created windows (if floating)
 yabai -m signal --add event=window_created action="~/.config/skhd/helpers/autosize.sh"

@@ -20,5 +20,9 @@ cmd + alt + ctrl - 8 : $HOME/.config/skhd/helpers/openspace.sh 8;
 cmd + alt + ctrl - 9 : $HOME/.config/skhd/helpers/openspace.sh 9;
 cmd + alt + ctrl - 0 : $HOME/.config/skhd/helpers/openspace.sh 10;
 
-# focus a window
-cmd + alt + ctrl - space : ~/.config/skhd/helpers/autofocus.sh
+# focus the most recently focused window
+cmd + alt + ctrl - space : yabai -m window --focus recent
+
+# cycle through a stack (stack.next/prev stop at the ends, so wrap by hand)
+cmd + alt + ctrl - tab : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+cmd + shift + alt + ctrl - tab : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
