@@ -1,11 +1,30 @@
 # Update yabai
 function yabai-update() {
-  yabai --stop-service && success=true || success=false
-  curl -L https://raw.githubusercontent.com/asmvik/yabai/master/scripts/install.sh | sh /dev/stdin ~/.local/bin ~/.local/man
+  yabai --stop-service && stopped=true || stopped=false
 
-  if [ "$success" = true ]; then
+  # reinstall yabai (remove old service file because homebrew changes binary path)
+  echo "Uninstalling yabai service..."
+  yabai --uninstall-service
+  echo "Reinstalling brew tap..."
+  brew reinstall asmvik/formulae/yabai
+  echo "Requesting new codesign certificate..."
+  codesign -fs "yabai-cert" "$(brew --prefix yabai)/bin/yabai"
+
+  if [ "$stopped" = true ]; then
+    echo "Restarting yabai..."
     yabai --start-service
   fi
+
+  echo "Done."
+  echo
+  echo "Consider updating the sudoers file with:"
+  echo "yabai-sudoers"
+}
+
+function yabai-sudoers() {
+  echo "Updating sudoers file..."
+  echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+  echo "Done."
 }
 
 # Dotfiles command dispatch
