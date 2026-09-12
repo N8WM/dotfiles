@@ -12,7 +12,7 @@ yabai -m config window_opacity off
 # yabai -m config normal_window_opacity 1.0
 
 # Window animations
-yabai -m config window_animation_duration 0.15
+# yabai -m config window_animation_duration 0.15
 
 # Status bar
 
