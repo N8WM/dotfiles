@@ -12,7 +12,8 @@ yabai -m config window_opacity off
 # yabai -m config normal_window_opacity 1.0
 
 # Window animations
-yabai -m config window_animation_duration 0.08
+# 0.0 so helpers that measure window frames never sample one mid-flight
+yabai -m config window_animation_duration 0.0
 
 # Status bar
 

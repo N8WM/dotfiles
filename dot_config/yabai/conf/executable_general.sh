@@ -71,3 +71,6 @@ yabai -m config mouse_follows_focus off
 
 # Automatically reposition newly created windows (if floating)
 yabai -m signal --add event=window_created action="~/.config/skhd/helpers/autosize.sh"
+
+# Give a window that refused to shrink the room it needs, by moving the split
+yabai -m signal --add event=window_resized action="~/.config/skhd/helpers/fitlayout.sh"
