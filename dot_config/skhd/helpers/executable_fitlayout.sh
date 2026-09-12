@@ -23,20 +23,16 @@ COOLDOWN=1  # seconds; stops a correction that causes a new clamp from ping-pong
 
 MENU_BAR_CACHE="$HOME/.cache/yabai/menu_bar_height"
 
-SPACEQ="$(yabai -m query --spaces --space)"
-IFS=$'\t' read -r SPACE_TYPE SPACE_INDEX < <(jq -r '[.type, .index] | @tsv' <<<"$SPACEQ")
-
-# Only bsp spaces have splits to move
-[[ "$SPACE_TYPE" == "bsp" ]] || exit 0
-
-STAMP="$HOME/.cache/yabai/fitlayout_last_${SPACE_INDEX}"
 LOCK="$HOME/.cache/yabai/fitlayout.lock"
-mkdir -p "$(dirname "$STAMP")"
+mkdir -p "$(dirname "$LOCK")"
 
 # window_resized fires once per affected window, so several copies of this script start at
 # the same moment. Without a lock they all read the same pre-correction frames, all pass
 # the cooldown check below, and all apply the same correction — moving the fence two or
 # three times as far as intended. mkdir is atomic, so exactly one copy gets through.
+#
+# This runs before any yabai query on purpose: the copies that lose the race should cost a
+# process spawn and nothing more.
 if ! mkdir "$LOCK" 2>/dev/null; then
   # Clear a lock left behind by an instance that was killed before it could clean up
   if [[ -n "$(find "$LOCK" -maxdepth 0 -mmin +1 2>/dev/null)" ]]; then
@@ -45,6 +41,14 @@ if ! mkdir "$LOCK" 2>/dev/null; then
   exit 0
 fi
 trap 'rmdir "$LOCK" 2>/dev/null || true' EXIT
+
+SPACEQ="$(yabai -m query --spaces --space)"
+IFS=$'\t' read -r SPACE_TYPE SPACE_INDEX < <(jq -r '[.type, .index] | @tsv' <<<"$SPACEQ")
+
+# Only bsp spaces have splits to move
+[[ "$SPACE_TYPE" == "bsp" ]] || exit 0
+
+STAMP="$HOME/.cache/yabai/fitlayout_last_${SPACE_INDEX}"
 
 # Don't correct again straight away: a correction can make the neighbour clamp, and its
 # resize event would bring us right back here.
@@ -82,12 +86,17 @@ if [[ ! -f "$MENU_BAR_CACHE" ]]; then
 fi
 MENU_BAR="$(($(cat "$MENU_BAR_CACHE") + 1))"
 
-GAP="$(yabai -m config window_gap)"
-IFS=$'\t' read -r PAD_T PAD_B PAD_L PAD_R < <(
-  printf '%s\t%s\t%s\t%s\n' \
+# Padding and gap only change when the yabai config does, and reading them costs five
+# round trips, so they are cached. general.sh rewrites this on every yabai start; delete
+# the file to force a refresh.
+METRICS_CACHE="$HOME/.cache/yabai/layout_metrics"
+if [[ ! -f "$METRICS_CACHE" ]]; then
+  printf '%s\t%s\t%s\t%s\t%s\n' \
     "$(yabai -m config top_padding)" "$(yabai -m config bottom_padding)" \
-    "$(yabai -m config left_padding)" "$(yabai -m config right_padding)"
-)
+    "$(yabai -m config left_padding)" "$(yabai -m config right_padding)" \
+    "$(yabai -m config window_gap)" >"$METRICS_CACHE"
+fi
+IFS=$'\t' read -r PAD_T PAD_B PAD_L PAD_R GAP <"$METRICS_CACHE"
 
 IFS=$'\t' read -r DX DY DW DH < <(
   yabai -m query --displays --display |

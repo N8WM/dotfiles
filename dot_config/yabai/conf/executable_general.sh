@@ -33,6 +33,13 @@ yabai -m config left_padding 20
 yabai -m config right_padding 20
 yabai -m config window_gap 12
 
+# Cache padding and gap for helpers that need the usable screen area, so they don't pay
+# five yabai round trips per run. Refreshed here on every yabai start.
+printf '%s\t%s\t%s\t%s\t%s\n' \
+  "$(yabai -m config top_padding)" "$(yabai -m config bottom_padding)" \
+  "$(yabai -m config left_padding)" "$(yabai -m config right_padding)" \
+  "$(yabai -m config window_gap)" >~/.cache/yabai/layout_metrics
+
 # Override gaps for space 2 only
 # yabai -m config --space 2 window_gap 0
 
