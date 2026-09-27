@@ -22,7 +22,7 @@ chezmoi init N8WM
 **Ghostty** | MacOS and Linux  
 [Homepage](https://ghostty.org/)
 
-**ZSH**
+**ZSH**  
 [Homepage](https://zsh.sourceforge.io/)
 
 **Fastfetch**  
